@@ -30,8 +30,39 @@
 
     <!-- Intensives Section -->
     <section class="intensives" id="intensives">
-      <div class="intensives__content">
-        <!-- код -->
+      <div class="intensives__container">
+        <h2 class="intensives__title">Интенсивы</h2>
+        <div class="intensives__cards">
+          <!-- Карточка интенсива -->
+          <div class="intensives__card" onclick="togglePopup(this)">
+            <div class="intensives__image-wrapper">
+              <img
+                src="images/intensive-1.jpg"
+                alt="Диагностическая консультация"
+                class="intensives__image"
+              />
+            </div>
+            <h3 class="intensives__name">Диагностическая консультация</h3>
+            <button class="intensives__button">Записаться</button>
+
+            <!-- Всплывающее окно -->
+            <div class="intensives__popup">
+              <button class="intensives__close" onclick="closePopup(this)">
+                ×
+              </button>
+              <h3 class="intensives__popup-title">
+                Диагностическая консультация
+              </h3>
+              <p class="intensives__popup-description">
+                Детальное описание интенсива: что входит, продолжительность,
+                результаты.
+              </p>
+            </div>
+          </div>
+          <!-- Конец карточки -->
+
+          <!-- Можно повторить для других карточек -->
+        </div>
       </div>
     </section>
 

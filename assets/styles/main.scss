@@ -1,88 +1,238 @@
 /* General Styles */
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-  }
-  
-  /* About Section */
-  .about {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* About Section */
+.about {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+}
+
+.about__content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Path Section */
+.path {
+  padding: 40px 20px;
+  background-color: #e6e6e6;
+}
+
+.path__content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Training Section */
+.training {
+  padding: 40px 20px;
+  background-color: #f5f5f5;
+}
+
+.training__content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Intensives Section */
+.intensives {
+  padding: 40px 20px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.intensives__content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.intensives__title {
+  font-family: 'Maharlika', serif;
+  font-size: 36px;
+  color: #cda498;
+  margin-bottom: 30px;
+}
+
+.intensives__cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.intensives__card {
+  position: relative;
+  background-color: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: calc(33.333% - 20px);
+  /* 3 карточки в ряд */
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.intensives__card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.intensives__image-wrapper {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.intensives__image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.intensives__name {
+  font-family: 'Cardo', serif;
+  font-size: 20px;
+  color: #2e2e2f;
+  margin-bottom: 10px;
+}
+
+.intensives__button {
+  display: inline-block;
+  font-family: 'Cardo', serif;
+  font-size: 16px;
+  color: #fff;
+  background-color: #cda498;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.intensives__button:hover {
+  background-color: #b48a7e;
+}
+
+.intensives__popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  padding: 20px;
+  width: 80%;
+  max-width: 500px;
+  display: none;
+  /* Скрываем окно по умолчанию */
+  z-index: 1000;
+}
+
+.intensives__popup-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.intensives__popup-description {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.intensives__close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.intensives__card:hover .intensives__popup {
+  display: block;
+  /* Показываем окно при наведении */
+}
+
+/* Мобильная версия */
+@media (max-width: 768px) {
+  .intensives__popup {
+    top: 0;
+    left: 0;
+    transform: none;
+    width: 100%;
+    height: 100%;
     padding: 40px 20px;
-    background-color: #f9f9f9;
+    overflow-y: auto;
   }
-  .about__content {
-    max-width: 1200px;
-    margin: 0 auto;
+
+  .intensives__close {
+    top: 20px;
+    right: 20px;
+  }
+
+  .intensives__cards {
+      gap: 15px;
+    }
+  
+    .intensives__card {
+      width: calc(50% - 15px); /* 2 карточки в ряд */
+    }
   }
   
-  /* Path Section */
-  .path {
-    padding: 40px 20px;
-    background-color: #e6e6e6;
-  }
-  .path__content {
-    max-width: 1200px;
-    margin: 0 auto;
+  @media (max-width: 480px) {
+    .intensives__card {
+      width: 100%; /* 1 карточка в ряд */
+    }
   }
   
-  /* Training Section */
-  .training {
-    padding: 40px 20px;
-    background-color: #f5f5f5;
-  }
-  .training__content {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  /* Intensives Section */
-  .intensives {
-    padding: 40px 20px;
-    background-color: #ffffff;
-  }
-  .intensives__content {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  /* Advantages Section */
-  .advantages {
-    padding: 40px 20px;
-    background-color: #f2f2f2;
-  }
-  .advantages__content {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  /* Reviews Section */
-  .reviews {
-    padding: 40px 20px;
-    background-color: #eaeaea;
-  }
-  .reviews__content {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  /* Blog Section */
-  .blog {
-    padding: 40px 20px;
-    background-color: #fafafa;
-  }
-  .blog__content {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  /* Footer Section */
-  .footer {
-    padding: 40px 20px;
-    background-color: #333333;
-    color: #ffffff;
-  }
-  .footer__content {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
+
+/* Advantages Section */
+.advantages {
+  padding: 40px 20px;
+  background-color: #f2f2f2;
+}
+
+.advantages__content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Reviews Section */
+.reviews {
+  padding: 40px 20px;
+  background-color: #eaeaea;
+}
+
+.reviews__content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Blog Section */
+.blog {
+  padding: 40px 20px;
+  background-color: #fafafa;
+}
+
+.blog__content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Footer Section */
+.footer {
+  padding: 40px 20px;
+  background-color: #333333;
+  color: #ffffff;
+}
+
+.footer__content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
