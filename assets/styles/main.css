@@ -1,32 +1,26 @@
+@charset "UTF-8";
 /* General Styles */
-
 @font-face {
-  font-family: 'Cardo';
-  src: url('../fonts/Cardo/cardo-regular-webfont.woff2') format('woff2'),
-    url('../fonts/Cardo/cardo-regular-webfont.woff') format('woff');
+  font-family: "Cardo";
+  src: url("../fonts/Cardo/cardo-regular-webfont.woff2") format("woff2"), url("../fonts/Cardo/cardo-regular-webfont.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
-
 @font-face {
-  font-family: 'Cardo';
-  src: url('../fonts/Cardo/cardo-bold-webfont.woff2') format('woff2'),
-    url('../fonts/Cardo/cardo-bold-webfont.woff') format('woff');
+  font-family: "Cardo";
+  src: url("../fonts/Cardo/cardo-bold-webfont.woff2") format("woff2"), url("../fonts/Cardo/cardo-bold-webfont.woff") format("woff");
   font-weight: 700;
   font-style: normal;
 }
-
 @font-face {
-  font-family: 'Cardo';
-  src: url('../fonts/Cardo/cardo-italic-webfont.woff2') format('woff2'),
-    url('../fonts/Cardo/cardo-italic-webfont.woff') format('woff');
+  font-family: "Cardo";
+  src: url("../fonts/Cardo/cardo-italic-webfont.woff2") format("woff2"), url("../fonts/Cardo/cardo-italic-webfont.woff") format("woff");
   font-weight: 400;
   font-style: italic;
 }
-
 body {
   margin: 0;
-  font-family: 'Cardo', Arial, sans-serif;
+  font-family: "Cardo", Arial, sans-serif;
   line-height: 1.6;
 }
 
@@ -41,7 +35,6 @@ body {
   display: none; /* Скрыт по умолчанию */
 }
 
-
 /* Стили всплывающего окна */
 .popup {
   position: absolute;
@@ -54,14 +47,14 @@ body {
 }
 
 .popup-title {
-  font-family: 'Maharlika', serif;
+  font-family: "Maharlika", serif;
   font-size: 20px;
   color: #cda498;
   margin-bottom: 15px;
 }
 
 .popup-description {
-  font-family: 'Cardo', serif;
+  font-family: "Cardo", serif;
   font-size: 14px;
   color: #2e2e2f;
   margin-bottom: 20px;
@@ -141,7 +134,7 @@ body {
 }
 
 .intensives__title {
-  font-family: 'Maharlika', serif;
+  font-family: "Maharlika", serif;
   font-size: 36px;
   color: #cda498;
   margin-bottom: 120px;
@@ -176,7 +169,7 @@ body {
 }
 
 .intensives__name {
-  font-family: 'Maharlika', serif;
+  font-family: "Maharlika", serif;
   font-size: 24px;
   color: #cda498;
   margin: 20px 0;
@@ -188,7 +181,7 @@ body {
   height: 68px;
   border-radius: 17px;
   background-color: #cda498;
-  font-family: 'Cardo', serif;
+  font-family: "Cardo", serif;
   font-size: 15px;
   color: #2e2e2f;
   border: none;
@@ -206,13 +199,10 @@ body {
     grid-template-columns: repeat(1, 1fr); /* Один столбец на маленьких экранах */
     gap: 20px;
   }
-
   .intensives__image-wrapper {
     height: 200px; /* Уменьшаем высоту изображения на мобильных устройствах */
   }
 }
-
-
 /* Advantages Section */
 .advantages {
   padding: 40px 20px;
@@ -257,3 +247,5 @@ body {
   max-width: 1200px;
   margin: 0 auto;
 }
+
+/*# sourceMappingURL=main.css.map */
