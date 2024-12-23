@@ -24,9 +24,23 @@
   font-style: italic;
 }
 
+/* Переменные */
+$font-primary: 'Cardo', Arial, sans-serif;
+$font-secondary: 'Maharlika', serif;
+$color-primary: #cda498;
+$color-secondary: #2e2e2f;
+$color-bg-light: #f9f9f9;
+$color-bg-dark: #333333;
+$color-popup-bg: #c5b1aa;
+$color-overlay: rgba(0, 0, 0, 0.8);
+$color-border: #e6e6e6;
+$transition-fast: 0.3s ease;
+$radius-small: 10px;
+$radius-large: 15px;
+
 body {
   margin: 0;
-  font-family: 'Cardo', Arial, sans-serif;
+  font-family: $font-primary;
   line-height: 1.6;
 }
 
@@ -36,17 +50,20 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.8); /* Полупрозрачный чёрный фон */
-  z-index: 5; /* Должен быть ниже, чем у всплывающего окна */
-  display: none; /* Скрыт по умолчанию */
+  background-color: $color-overlay;
+  z-index: 5;
+  display: none;
 }
 
+.hidden {
+  display: none;
+}
 
 /* Стили всплывающего окна */
 .popup {
   position: absolute;
-  background-color: #c5b1aa;
-  border-radius: 15px;
+  background-color: $color-popup-bg;
+  border-radius: $radius-large;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   padding: 20px;
   z-index: 10;
@@ -54,16 +71,16 @@ body {
 }
 
 .popup-title {
-  font-family: 'Maharlika', serif;
+  font-family: $font-secondary;
   font-size: 20px;
-  color: #cda498;
+  color: $color-primary;
   margin-bottom: 15px;
 }
 
 .popup-description {
-  font-family: 'Cardo', serif;
+  font-family: $font-primary;
   font-size: 14px;
-  color: #2e2e2f;
+  color: $color-secondary;
   margin-bottom: 20px;
 }
 
@@ -72,7 +89,7 @@ body {
   background: none;
   border: none;
   font-size: 24px;
-  color: #cda498;
+  color: $color-primary;
   position: absolute;
   top: 10px;
   right: 10px;
@@ -81,7 +98,7 @@ body {
 
 .popup__close:hover,
 .intensives__close:hover {
-  color: #d6b0a4;
+  color: lighten($color-primary, 10%);
 }
 
 /* Hero Section */
@@ -136,29 +153,29 @@ body {
 }
 
 .intensives__container {
-  max-width: 1260px; /* Центрируем секцию с фиксированной шириной */
+  max-width: 1260px;
   margin: 0 auto;
 }
 
 .intensives__title {
-  font-family: 'Maharlika', serif;
+  font-family: $font-secondary;
   font-size: 36px;
-  color: #cda498;
+  color: $color-primary;
   margin-bottom: 120px;
 }
 
 /* Сетка карточек */
 .intensives__cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Три столбца одинаковой ширины */
-  gap: 42px; /* Расстояние между карточками */
-  justify-content: center; /* Центрируем карточки */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 42px;
+  justify-content: center;
 }
 
 .intensives__card {
-  background-color: #f9f9f9;
-  border: 1px solid #e6e6e6;
-  border-radius: 10px;
+  background-color: $color-bg-light;
+  border: 1px solid $color-border;
+  border-radius: $radius-small;
   overflow: hidden;
   text-align: center;
 }
@@ -176,9 +193,9 @@ body {
 }
 
 .intensives__name {
-  font-family: 'Maharlika', serif;
+  font-family: $font-secondary;
   font-size: 24px;
-  color: #cda498;
+  color: $color-primary;
   margin: 20px 0;
 }
 
@@ -186,29 +203,29 @@ body {
   display: inline-block;
   width: 258px;
   height: 68px;
-  border-radius: 17px;
-  background-color: #cda498;
-  font-family: 'Cardo', serif;
+  border-radius: $radius-large;
+  background-color: $color-primary;
+  font-family: $font-primary;
   font-size: 15px;
-  color: #2e2e2f;
+  color: $color-secondary;
   border: none;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color $transition-fast;
 }
 
 .intensives__button:hover {
-  background-color: #d6b0a4;
+  background-color: lighten($color-primary, 10%);
 }
 
 /* Медиазапрос для мобильных устройств */
 @media (max-width: 768px) {
   .intensives__cards {
-    grid-template-columns: repeat(1, 1fr); /* Один столбец на маленьких экранах */
+    grid-template-columns: repeat(1, 1fr);
     gap: 20px;
   }
 
   .intensives__image-wrapper {
-    height: 200px; /* Уменьшаем высоту изображения на мобильных устройствах */
+    height: 200px;
   }
 }
 
